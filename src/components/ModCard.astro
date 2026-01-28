@@ -1,0 +1,17 @@
+---
+interface Props {
+  href: string;
+  image: string;
+  alt: string;
+  title: string;
+}
+
+const { href, image, alt, title } = Astro.props;
+---
+
+<div class="post-destacado">
+  <a href={href}>
+    <img src={`/images/${image}`} alt={alt} width="300" height="169" loading="lazy">
+    {title}
+  </a>
+</div>

@@ -1,0 +1,44 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Download the best V Slice Friday Night Funkin' MODs (Mobile Ports). More than 200+ Different FNF MODs optimized for Android & iOS." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={description}>
+  <title>{title}</title>
+  <link rel="icon" type="image/png" href="/images/v-slice-logo2.png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <a href="/" class="site-logo">
+        <img src="/images/v-slice-logo2.png" alt="V-Slice FNF MODs" width="440" height="116">
+      </a>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <slot />
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 V-Slice.com - Friday Night Funkin' MODs for Mobile</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

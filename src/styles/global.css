@@ -1,0 +1,239 @@
+/* Reset y base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222222;
+  background-color: #f7f8f9;
+}
+
+a {
+  color: #1e73be;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2, h3 {
+  color: #222222;
+}
+
+/* Container principal */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-logo img {
+  max-height: 60px;
+  width: auto;
+}
+
+/* Main content */
+.site-main {
+  padding: 30px 0;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #666666;
+}
+
+/* Galería de MODs */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+.post-destacado {
+  width: calc(33.3% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: #ececec;
+  border-radius: 10px;
+}
+
+.post-destacado:hover {
+  transform: scale(1.05);
+}
+
+.galeria::after {
+  content: "";
+  width: calc(33.33% - 10px);
+  margin-right: 10px;
+}
+
+.post-destacado a {
+  color: #A30081;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  padding-bottom: 10px;
+}
+
+.post-destacado a:hover {
+  text-decoration: none;
+}
+
+.post-destacado img {
+  width: 100%;
+  height: 125px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.post-destacado p {
+  margin: 0;
+  color: #000;
+}
+
+/* Responsive galería */
+@media (max-width: 1100px) {
+  .post-destacado {
+    width: calc(33% - 10px);
+    height: 200px;
+  }
+}
+
+@media (max-width: 730px) {
+  .post-destacado {
+    width: calc(50% - 10px);
+  }
+
+  .galeria::after {
+    content: "";
+    width: calc(50% - 10px);
+  }
+
+  .post-destacado img {
+    height: 125px;
+  }
+
+  .post-destacado a {
+    font-size: 0.8em;
+  }
+}
+
+/* Contenido de página individual */
+.page-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.page-content p {
+  margin-bottom: 1em;
+}
+
+.page-content ul, .page-content ol {
+  margin-bottom: 1em;
+  padding-left: 30px;
+}
+
+.page-content li {
+  margin-bottom: 0.5em;
+}
+
+/* Imagen centrada */
+.aligncenter {
+  display: block;
+  margin: 20px auto;
+}
+
+/* Texto centrado */
+.text-center {
+  text-align: center;
+}
+
+/* Botones de descarga */
+.download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #55555e;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #3f4047;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.download-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Responsive botones */
+@media (max-width: 600px) {
+  .download-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+}

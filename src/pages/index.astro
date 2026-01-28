@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ModCard from '../components/ModCard.astro';
+
+const title = "V-Slice FNF MODs - Friday Night Funkin' Mobile [iOS & Android]";
+const description = "Download the best V Slice Friday Night Funkin' MODs (Mobile Ports). More than 200+ Different FNF MODs optimized for Android & iOS.";
+
+const mods = [
+  { href: "/fnf-vs-whitty/", image: "whitty-min.webp", alt: "FNF VS Whitty", title: "FNF VS Whitty V-Slice" },
+  { href: "/fnf-vs-garcello/", image: "vs-garcello-v-slice-min.webp", alt: "FNF VS Garcello", title: "FNF VS Garcello V-Slice" },
+  { href: "/fnf-vs-hex/", image: "vs-hex-v-slice-min.webp", alt: "FNF VS Hex", title: "FNF VS Hex V-Slice" },
+  { href: "/fnf-vs-matt/", image: "vs-matt-min.webp", alt: "FNF VS Matt", title: "FNF VS Matt V-Slice" },
+  { href: "/fnf-vs-nonsense/", image: "nonsense-v-slice-min.webp", alt: "FNF VS Nonsense", title: "FNF VS Nonsense V-Slice" },
+  { href: "/fnf-vs-mid-fight-masses/", image: "mid-fight-masses-v-slice-min.webp", alt: "FNF VS Sarvente", title: "FNF VS Sarvente V-Slice" },
+  { href: "/fnf-vs-shaggy/", image: "vs-shaggy-vslice-min.webp", alt: "FNF VS Shaggy", title: "FNF VS Shaggy V-Slice" },
+  { href: "/fnf-vs-sonic-exe/", image: "vs-sonic-exe-vslice-min.webp", alt: "FNF VS Sonic", title: "FNF VS Sonic V-Slice" },
+  { href: "/fnf-vs-tricky/", image: "vs-tricky-vslice-min.webp", alt: "FNF VS Tricky", title: "FNF VS Tricky V-Slice" },
+  { href: "/fnf-doki-doki-takeover/", image: "doki-doki-takeover-vslice-min.webp", alt: "FNF VS Doki Doki Takeover", title: "VS Doki Doki Takeover" },
+  { href: "/fnf-vs-impostor/", image: "impostor-v5-min.webp", alt: "FNF VS Impostor", title: "FNF VS Impostor V-Slice" },
+  { href: "/fnf-vs-huggy-wuggy/", image: "vs-huggy-wuggy-min.webp", alt: "FNF VS Huggy Wuggy", title: "FNF VS Huggy Wuggy V-Slice" },
+  { href: "/fnf-indie-cross/", image: "indie-cross-vlice-min.webp", alt: "FNF Indie Cross", title: "FNF Indie Cross V-Slice" },
+  { href: "/fnf-vs-accelerant-hank/", image: "accelerant-hank-min.webp", alt: "FNF VS Accelerant Hank", title: "VS Accelerant Hank V-Slice" },
+  { href: "/fnf-neo/", image: "fnf-neo-vslice-min.webp", alt: "FNF NEO", title: "FNF NEO V-Slice" },
+  { href: "/fnf-vs-silly-billy/", image: "silly-billy-min.webp", alt: "FNF VS Silly Billy", title: "FNF VS Silly Billy V-Slice" },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <h1>V-Slice FNF MODs</h1>
+
+  <p class="text-center"><strong>Download V-Slice FNF MODs</strong> for Android and iOS. The best compilation of Friday Night Funkin' MODs ready to install on Mobile.</p>
+
+  <p>Since the release of the official version of FNF Mobile in the summer of 2025, installing and playing FNF MODs on Android and iOS is easier than ever. All MODs that have been adapted to the V-Slice format can be installed directly and in just a few clicks within a folder in the official game. This is extremely convenient and greatly improves the experience compared to the multiple installations that had to be performed in the past (one for each MOD).</p>
+
+  <div class="galeria">
+    {mods.map((mod) => (
+      <ModCard
+        href={mod.href}
+        image={mod.image}
+        alt={mod.alt}
+        title={mod.title}
+      />
+    ))}
+  </div>
+
+  <h3>What is V-Slice?</h3>
+  <p>It is simply the format required for MODs to be compatible with the new official version of Friday Night Funkin' for Android or iOS. If you want the MOD you are downloading to be compatible with the official version, you will need to make sure that the MOD you are downloading is in V-Slice format. Luckily, at V-Slice.com, all the MODs we publish are prepared in this format, so you won't have to worry about a thing.</p>
+
+  <h3>How to install MODs on FNF Mobile?</h3>
+  <p>The process is very simple and will take you less than a minute once you have learned how to do it correctly:</p>
+  <ol>
+    <li>Download the MOD you want to install. (Any one you find on our website will work).</li>
+    <li>Unzip the .zip or .rar file you have downloaded.</li>
+    <li>Move the entire folder of MOD files into the "MODS" folder in the official game files.</li>
+    <li>Open the game and enjoy the new songs/characters from the MOD.</li>
+  </ol>
+  <p>If you're still not sure, there are dozens of video tutorials on YouTube with all the steps you need to follow to <strong>install MODs on FNF Mobile</strong>.</p>
+</BaseLayout>
