@@ -37,7 +37,7 @@ h2, h3 {
 
 /* Container principal */
 .container {
-  max-width: 800px;
+  max-width: 880px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -50,7 +50,7 @@ h2, h3 {
 }
 
 .header-content {
-  max-width: 800px;
+  max-width: 880px;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
@@ -161,7 +161,7 @@ h2, h3 {
 /* Contenido de página individual */
 .page-content {
   background-color: #ffffff;
-  padding: 30px;
+  padding: 40px;
   border-radius: 10px;
   margin-bottom: 30px;
 }
