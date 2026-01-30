@@ -237,3 +237,19 @@ h2, h3 {
     justify-content: center;
   }
 }
+
+/* Footer links */
+.footer-links {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.footer-links a {
+  color: #888888;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #1e73be;
+  text-decoration: underline;
+}
